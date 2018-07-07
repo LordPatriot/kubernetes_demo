@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: redis-deployment
   labels:
-    name: redis-deployment
     app: demo-voting-app
 spec:
   replicas: 1

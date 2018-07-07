@@ -3,10 +3,9 @@ kind: Deployment
 metadata:
   name: worker-app-deployment
   labels:
-    name: worker-app-deployment
     app: demo-voting-app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       name: worker-app-pod
@@ -17,8 +16,8 @@ spec:
       labels:
         name: worker-app-pod
         app: demo-voting-app
+
     spec:
       containers:
       - name: worker-app
         image: dockersamples/examplevotingapp_worker
-
