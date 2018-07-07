@@ -18,7 +18,7 @@ spec:
         app: redis-master
     spec:
       containers:
-      - name: redis
+      - name: redis-m
         image: kubernetes/redis
         ports:
         - containerPort: 6379
