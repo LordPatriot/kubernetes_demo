@@ -10,4 +10,5 @@ spec:
   - name: frontend
     image: kubernetes/guestbook:v2
     ports:
-    - containerPort: 80
+    - name: http
+      containerPort: 3000
