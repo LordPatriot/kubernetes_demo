@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: redis-slave
   labels:
+    name: redis-slave
     app: redis-slave
 spec:
   ports:
@@ -10,4 +11,5 @@ spec:
     targetPort: 6379
 
   selector:
+    name: redis-slave-pod
     app: redis-slave

@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: redis-master
   labels:
+    name: redis-master
     app: redis-master
 spec:
   ports:
@@ -10,4 +11,5 @@ spec:
     targetPort: 6379
 
   selector:
+    name: redis-master-pod
     app: redis-master

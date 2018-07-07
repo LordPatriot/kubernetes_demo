@@ -16,7 +16,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend
+      - name: fe
         image: kubernetes/guestbook:v2
         ports:
         - name: http

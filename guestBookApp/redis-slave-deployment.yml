@@ -3,19 +3,22 @@ kind: Deployment
 metadata:
   name: redis-slave-deployment
   labels:
+    name: redis-slave-deployment
     app: redis-slave
 spec:
   replicas: 3
   selector:
     matchLabels:
+      name: redis-slave-pod
       app: redis-slave
   template:
     metadata:
       labels:
+        name: redis-slave-pod
         app: redis-slave
     spec:
       containers:
-      - name: redis-slave
+      - name: redis
         image: kubernetes/redis
         ports:
         - containerPort: 6379

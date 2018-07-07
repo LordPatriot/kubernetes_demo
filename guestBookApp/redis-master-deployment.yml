@@ -3,19 +3,22 @@ kind: Deployment
 metadata:
   name: redis-master-deployment
   labels:
+    name: redis-master-deployment
     app: redis-master
 spec:
   replicas: 1
   selector:
     matchLabels:
+      name: redis-master-pod
       app: redis-master
   template:
     metadata:
       labels:
+        name: redis-master-pod
         app: redis-master
     spec:
       containers:
-      - name: redis-master
+      - name: redis
         image: kubernetes/redis
         ports:
         - containerPort: 6379
