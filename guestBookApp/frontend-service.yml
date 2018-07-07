@@ -12,5 +12,4 @@ spec:
     targetPort: 3000
 
   selector:
-    name: frontend-pod
-    app: guest-book-app
+    name: frontend
