@@ -18,7 +18,7 @@ spec:
         app: redis-slave
     spec:
       containers:
-      - name: redis-s
-        image: kubernetes/redis
+      - name: redis-slave
+        image: kubernetes/redis-slave:v2
         ports:
         - containerPort: 6379

@@ -4,7 +4,7 @@ metadata:
   name: frontend-service
   labels:
     name: frontend-service
-    app: guest-book-app
+    app: frontend
 spec:
   type: LoadBalancer
   ports:
